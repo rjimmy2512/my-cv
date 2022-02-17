@@ -1,38 +1,221 @@
-.App {
+body {
+  background-color: rgb(225, 250, 242);
+  font-family: 'Merriweather', serif;
+  margin: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 5.625rem;
+  font-family: 'Tangerine', cursive;
+  margin-bottom: 0px;
+  margin: 0 auto 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  color: #11999e;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a,
+h3 {
+  color: #11999e;
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  line-height: 1.5;
+  padding-top: 10px;
+}
+
+hr {
+  border-style: dotted none none;
+  border-bottom-width: 30px;
+  border-top-width: 6px;
+  color: gray;
+  position: inherit;
+  margin: 0 auto 0 auto;
+  padding: 50px 50px 0 50px;
+  width: 1em;
+}
+
+/************************* CLASSES ***********************/
+
+.top-display {
+  background-color: black;
+  display: block;
+  height: 150px;
+  position: relative;
+}
+
+.text-top-display {
+  color: rgb(44, 145, 192);
+  font: solid 30px sans-serif;
+  padding-top: 50px;
+  margin-top: 0px;
+  font-size: 1.5rem;
+}
+
+.top-container {
+  display: block;
+  position: relative;
+}
+
+.profile {
+  padding-bottom: 40px;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 30px auto 70px auto;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.skill-row2 {
+  width: 50%;
+  margin: 100px auto 50px auto;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.profile-pic {
+  margin: 30px;
+  width: 25%;
+}
+
+.skills-img {
+  float: left;
+  margin-right: 30px;
+  width: 30%;
+}
+
+.education-img {
+  float: right;
+  margin-left: 30px;
+  padding-top: 40px;
+  width: 30%;
+}
+
+.top-cloud {
+  left: 300px;
+  position: relative;
+  top: 20px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  left: 15%;
+}
+
+.p-title {
+  color: #11999e;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em;
+}
+
+.BUTTON_EDR {
+  box-shadow: inset 0px 1px 0px 0px #bee2f9;
+  background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+  background-color: #63b8ee;
+  border-radius: 2px;
+  border: 1px solid #3866a3;
+  display: inline-block;
+  cursor: pointer;
+  color: #14396a;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #7cacde;
+}
+
+.BUTTON_EDR:hover {
+  background: linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+  background-color: #468ccf;
+}
+
+.BUTTON_EDR {
+  position: relative;
+  top: 1px;
+}
+
+.text-btn {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.text-btn:hover {
+  color: yellow;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bottom-container {
+  background-color: black;
+  height: 100px;
+  line-height: 3;
+  margin-top: 50px;
+  padding: 30px;
+}
+
+.footer-link {
+  color: #11999e;
+  font: bold 1em sans-serif;
+  margin: auto 30px;
+  outline: none;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+#trademark {
+  color: #eaf6f6;
+  font-size: 12px;
+}
+
+/************************* MOVING ELEMENTS ***********************/
+
+.text-top-display {
+  -webkit-animation: text-top-display 8s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  infinite alternate-reverse;
+  animation: text-top-display 8s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite
+  alternate-reverse;
+}
+
+@-webkit-keyframes text-top-display {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(250px);
+    transform: translateZ(250px);
+    opacity: 0;
+  }
+}
+@keyframes text-top-display {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(250px);
+    transform: translateZ(250px);
+    opacity: 0;
   }
 }
